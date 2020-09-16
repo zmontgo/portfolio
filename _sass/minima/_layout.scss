@@ -53,7 +53,7 @@ h1, h2, h3 {
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
+    background-color: #000;
     border: 2px solid black;
     border-radius: 5px;
     text-align: right;
@@ -79,7 +79,7 @@ h1, h2, h3 {
       text-align: center;
 
       > svg {
-        fill: black;
+        fill: #fff;
       }
     }
 
@@ -96,7 +96,7 @@ h1, h2, h3 {
     .page-link {
       display: block;
       padding: 5px 10px;
-      color: black;
+      color: #fff;
 
       &:not(:last-child) {
         margin-right: 0;
