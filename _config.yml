@@ -20,8 +20,6 @@ matomo: false
 show_excerpts: true
 header_pages:
 - index.md
-- friends.md
-- blog.md
 theme: minima
 plugins:
 - jekyll-feed
