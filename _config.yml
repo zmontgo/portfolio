@@ -10,9 +10,7 @@ collections:
     title: Uploads
     output: true
 environment: production
-description: 'The Bookery is a large community of over 1000 members focused around
-  all things written word. Created in 2020 by Zachary Montgomery and Benjamin Hollon,
-  we are dedicated to the creation, consumption, admiration, and discussion of literature. '
+description: 'A US-based developer looking to begin freelancing. Skilled with frontend and backend developing, along with Discord bot creation. Picking up new frameworks is not a problem.'
 baseurl: ''
 url: https://bookerycommunity.com
 discord_url: tfhg7TW
