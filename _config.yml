@@ -1,13 +1,9 @@
 ---
-title: The Bookery
+title: Zachary Montgomery
 timezone: UTC
 collections:
-  posts:
-    title: Posts
-    output: true
-    comments: true
-  uploads:
-    title: Uploads
+  portfolio:
+    title: Work
     output: true
 environment: production
 description: 'A US-based developer looking to begin freelancing. Skilled with frontend and backend developing, along with Discord bot creation. Picking up new frameworks is not a problem.'
