@@ -345,3 +345,19 @@ h1, h2, h3 {
 	    z-index: -100;
 	}
 }
+
+.cardholder {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card {
+    margin: 1em;
+    border: 3px white solid;
+    padding: 0.5em;
+    padding-top: 0;
+    border-radius: 0.5em;
+}
