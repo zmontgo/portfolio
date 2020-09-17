@@ -13,7 +13,7 @@
 }
 
 h1, h2, h3 {
-  font-family: 'Courier Prime';
+  font-family: 'Comfortaa';
 }
 
 .site-title {
@@ -24,7 +24,7 @@ h1, h2, h3 {
   margin-bottom: 0;
   float: left;
   color: white;
-  font-family: 'Courier Prime';
+  font-family: 'Comfortaa';
 }
 
 .site-nav {
@@ -210,7 +210,7 @@ h1, h2, h3 {
 
 .post-list-heading {
   @include relative-font-size(1.75);
-  font-family: 'Courier Prime';
+  font-family: 'Comfortaa';
 }
 
 .post-list {
@@ -229,7 +229,7 @@ h1, h2, h3 {
 .post-link {
   display: block;
   @include relative-font-size(1.5);
-  font-family: 'Courier Prime';
+  font-family: 'Comfortaa';
 }
 
 
@@ -245,7 +245,7 @@ h1, h2, h3 {
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
-  font-family: 'Courier Prime';
+  font-family: 'Comfortaa';
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
@@ -293,7 +293,7 @@ h1, h2, h3 {
 }
 .blue-header {
   color: #DCD0D0;
-  font-family: 'Courier Prime';
+  font-family: 'Comfortaa';
 }
 .content {
   padding: .5rem .75rem;
