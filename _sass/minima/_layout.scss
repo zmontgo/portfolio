@@ -15,6 +15,10 @@
 
 .header-solid {
   background-color: #000000FF;
+
+  .site-nav {
+    background-color: #000000FF;
+  }
 }
 
 h1, h2, h3 {
@@ -58,7 +62,7 @@ h1, h2, h3 {
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: #000;
+    background-color: #00000000;
     border: 2px solid white;
     border-radius: 5px;
     text-align: right;
