@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-{%- include head.html -%}
+<!--{%- include head.html -%}-->
 
 <body>
   
@@ -10,12 +10,12 @@
   <!-- below navigation -->
   
   <main class="page-content" aria-label="Content">
-    <div class="wrapper">
+    <div class="wrapper" id="particles-js">
       {{ content }}
     </div>
   </main>
   
-  {%- include footer.html -%}
+<!--{%- include footer.html -%}-->
   
 </body>
 
