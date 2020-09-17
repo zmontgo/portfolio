@@ -333,3 +333,9 @@ h1, h2, h3 {
   from{border-right-color: rgba(0,255,0,.75);}
   to{border-right-color: transparent;}
 }
+
+#particles-js {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
