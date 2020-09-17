@@ -17,6 +17,7 @@
   background-color: #000000FF;
 
   .site-nav {
+    transition: 0.5s;
     background-color: #000000FF;
   }
 }
@@ -37,7 +38,11 @@ h1, h2, h3 {
 }
 
 .site-nav {
-  float: right;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
   line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
