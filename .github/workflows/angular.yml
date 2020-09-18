@@ -1,8 +1,13 @@
-name: Build and Deploy
-on:
-  push
-jobs:
-  build:
+- name: Checkout
+  uses: actions/checkout@v2.3.2
+  with:
+    repository: develop
+
+- name: Build and Deploy
+  on:
+    push
+  jobs:
+    build:
 
     runs-on: ubuntu-latest
 
