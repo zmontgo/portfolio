@@ -1,0 +1,20 @@
+---
+title: Zachary M.
+timezone: UTC
+collections:
+  portfolio:
+    title: Work
+    output: true
+environment: production
+description: 'A US-based developer looking to begin freelancing. Skilled with frontend and backend developing, along with Discord bot creation. Picking up new frameworks is not a problem.'
+baseurl: ''
+url: https://codingprojects.org
+discord_url: tfhg7TW
+matomo: false 
+show_excerpts: true
+header_pages:
+- index.md
+theme: minima
+plugins:
+- jekyll-feed
+- jekyll-sitemap

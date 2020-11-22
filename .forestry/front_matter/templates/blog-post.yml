@@ -1,0 +1,44 @@
+---
+label: Blog Post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- name: author
+  type: text
+  config:
+    required: true
+  label: Author
+- type: datetime
+  name: date
+  label: date
+  config:
+    required: false
+  default: now
+  hidden: true
+- type: text
+  name: layout
+  label: layout
+  default: post
+  hidden: true
+- name: categories
+  type: tag_list
+  default: []
+  label: Categories
+- type: boolean
+  name: comments
+  label: Comments
+  default: true
+- name: excerpt
+  type: text
+  config:
+    required: false
+  label: Excerpt
+  description: This is a summary of the post and will be sent in an email and shown
+    on the blog page.
+pages:
+- _posts/2020-08-16-starting-a-blog.md
+- _posts/fahrenheit451.md
