@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="topnav-spacer"></div>
+<article class="project h-entry section" style="border:none" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="project-header">
+    <h1 class="project-title p-name red-header" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="project-meta">
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-author h-card" itemprop="name">{{ page.author }} on</span>
+      </span>
+    </p>
+  </header>
+
+  <div class="project-content e-content" itemprop="articleBody">
+    
+  </div>
+
+  {%- if page.comments -%}
+    <div class="commentbox"></div>
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
+
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>
+  commentBox('5671414103277568-proj');
+</script>

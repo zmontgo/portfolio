@@ -1,41 +1,40 @@
 ---
 layout: default
 ---
-
+<div class="topnav-spacer"></div>
 <div>
     <div class="index-header top-wrapper">
         <div class="top-spacer" id="imagespacer">
             <img src="/assets/picture.png" onerror="document.getElementById('imagespacer').style.display='none'">
         </div>
         <div class="top-spacer">
-            <h1 style="font-family: 'Comfortaa';">Zachary Montgomery</h1>
-            <h2 style="font-family: 'Comfortaa';">Freelance Web Developer</h2>
+            <h1 style="font-family: 'Comfortaa';color:#DCD0D0">Zachary Montgomery</h1>
+            <h2 style="font-family: 'Comfortaa';color:#DCD0D0">Freelance Web Developer</h2>
         </div>
     </div>
-    <div class="about-us index-sections content">
-        <h2 class='blue-header'>About Me</h2>
+    <div class="about-us index-sections content section">
+        <h2 class='orange-header'>About Me</h2>
         <p>{{- site.description | escape -}}</p>
-        <p>As I'm building my portfolio I'm willing to work for very cheap or even free, while keeping excellent quality code.</p>
+        <p style="font-size: 1.75em;font-family: 'Sacramento', sans-serif;">Let's make something great.</p>
+        <p>Get a website professionally designed, built, tested, and deployed for around <strong>$1,000</strong> (price may vary depending on size and difficulty of the project). Contact me at <a href="mailto:zachmontgo@outlook.com">zachmontgo@outlook.com</a> to bring your vision to life.</p>
     </div>
-    <div class="about-us index-sections content">
-        <h2 class='blue-header'>Recent Work</h2>
-        <div class="cardholder">
-            <div class="card">
-                <h3>Big Title</h3>
-                <a href="#">Link</a>
-            </div>
-            <div class="card">
-                <h3>Big Title</h3>
-                <a href="#">Link</a>
-            </div>
-            <div class="card">
-                <h3>Big Title</h3>
-                <a href="#">Link</a>
-            </div>
-        </div>
+    <div class="about-us index-sections content section">
+        <h2 class='orange-header'>Recent Work</h2>
+        <ul class="project-list">
+            {%- for project in site.projects | limit: 3 -%}
+            
+            <li class="project">
+                <h3>{{ project.title | escape }}</h3>
+                <p>"{{ project.quote }}"</p>
+                <a href="{{ project.url | relative_url }}">Details</a>
+            </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+    <div class="about-us index-sections content section">
+        <h2 class='orange-header'>Contact Me</h2>
+        <a href="mailto:zachmontgo@outlook.com">Send Me An Email</a>
     </div>
 
 </div>
-
-<script type="text/javascript" src="{{ base.url | prepend: site.url }}/assets/js/particles.js"></script>
 <script type="text/javascript" src="{{ base.url | prepend: site.url }}/assets/js/app.js"></script>
