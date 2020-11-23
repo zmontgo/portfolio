@@ -1,44 +1,50 @@
 ---
 label: Blog Post
 hide_body: false
+display_field: title
 fields:
 - type: text
   name: title
   label: Title
   config:
     required: true
-- name: author
-  type: text
-  config:
-    required: true
-  label: Author
 - type: datetime
   name: date
   label: date
-  config:
-    required: false
-  default: now
   hidden: true
+  default: now
 - type: text
   name: layout
   label: layout
-  default: post
   hidden: true
-- name: categories
-  type: tag_list
-  default: []
+  default: post
+- type: text
+  name: main_content
+  config:
+    required: true
+  label: Summary
+  description: A summary of the blog post sent in the email.
+- type: list
+  name: categories
   label: Categories
+  description: Choose clear and specific categories about this post.
+  config:
+    use_select: false
+    min: 3
+    max: 6
 - type: boolean
   name: comments
   label: Comments
+  description: Turn comments on or off on this post.
   default: true
-- name: excerpt
-  type: text
+- type: text
+  name: author
+  label: Author
+  description: First and last name.
   config:
-    required: false
-  label: Excerpt
-  description: This is a summary of the post and will be sent in an email and shown
-    on the blog page.
+    required: true
+- type: file
+  name: image
+  label: Author Image
 pages:
 - _posts/2020-08-16-starting-a-blog.md
-- _posts/fahrenheit451.md

@@ -1,122 +1,5 @@
-/**
- * Site header
- */
-.site-header {
-  border-top: none;
-  min-height: $spacing-unit * 1.865;
-  // Positioning context for the mobile navigation icon
-  position: fixed;
-  right: 0;
-  left: 0;
-  background-color: #00000000;
-  z-index: 100;
-  transition: 0.5s;
-}
-
-.header-solid {
-  background-color: #000000FF;
-
-  .site-nav {
-    transition: 0.5s;
-    background-color: #000000FF;
-  }
-}
-
 h1, h2, h3 {
   font-family: 'Comfortaa';
-}
-
-.site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left;
-  color: white;
-  font-family: 'Comfortaa';
-}
-
-.site-nav {
-  width: 100%;
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  line-height: $base-line-height * $base-font-size * 2.25;
-
-  .nav-trigger {
-      display: none;
-  }
-
-  .menu-icon {
-    display: none;
-  }
-
-  .page-link {
-    color:white;
-    line-height: $base-line-height;
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
-
-  @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
-    background-color: #00000000;
-    border: 2px solid white;
-    border-radius: 5px;
-    text-align: right;
-    
-    label[for="nav-trigger"] {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 36px;
-      z-index: 2;
-      cursor: pointer;
-    }
-
-
-
-    .menu-icon {
-      display: block;
-      width: 36px;
-      height: 26px;
-      line-height: 0;
-      padding-top: 10px;
-      text-align: center;
-
-      > svg {
-        fill: #fff;
-      }
-    }
-
-    input ~ .trigger {
-      clear: both;
-      display: none;
-    }
-
-    input:checked ~ .trigger {
-      display: block;
-      padding-bottom: 5px;
-    }
-
-    .page-link {
-      display: block;
-      padding: 5px 10px;
-      color: #fff;
-
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-      margin-left: 20px;
-    }
-  }
 }
 
 
@@ -124,13 +7,17 @@ h1, h2, h3 {
 /**
  * Site footer
  */
-.site-footer {
-  padding: $spacing-unit 0;
-  background-color: #000;
+ .site-footer {
+  padding: $spacing-unit 1em;
+  background-color: #000000;
+
+  a:hover {
+    color: #fff;
+  }
 }
 
 .footer-heading {
-  @include relative-font-size(1.125);
+  @include relative-font-size(1.375);
   margin-bottom: $spacing-unit / 2;
   color: white;
   text-align: left;
@@ -170,6 +57,17 @@ h1, h2, h3 {
   width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
+.post-meta {
+  font-size: $small-font-size;
+}
+
+.post {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 1em 2em;
+  width: 47%;
+}
+
 @include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
@@ -187,9 +85,25 @@ h1, h2, h3 {
   .shownlink {
     display: none;
   }
+  .post {
+    width: 100%;
+  }
 }
 
 @include media-query($on-palm) {
+  p, .logo, a {
+    font-size: 4.5vw;
+  }
+  .social-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+  }
+  .post-meta {
+    font-size: 1em;
+  }
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
@@ -206,6 +120,7 @@ h1, h2, h3 {
 .hiddenlink {
   display:none;
 }
+
 
 
 /**
@@ -232,6 +147,7 @@ h1, h2, h3 {
 
   > li {
     margin-bottom: $spacing-unit;
+    
   }
 }
 
@@ -372,4 +288,152 @@ h1, h2, h3 {
     padding: 1.5em;
     padding-top: 0;
     border-radius: 0.5em;
+}
+
+.top-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .top-spacer {
+    margin: 1em;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: #DCD0D0 5px solid;
+    padding: 5px;
+  }
+}
+
+.social-btns {
+  overflow: hidden;
+}
+.social-btns .btn, .social-btns .btn:before, .social-btns .btn .fab {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0, 0);
+}
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+  visibility: visible;
+}
+.social-btns .btn .fab {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.social-btns .btn.instagram {
+  color: $instagram;
+  
+  &:hover {
+    transition: background-color 1s;
+    background: $instagram;
+  }
+
+  &:before {
+    background: $instagram;
+  }
+}
+
+.social-btns .btn.twitter {
+  color: $twitter;
+
+  &:hover {
+    transition: background-color 1s;
+    background: $twitter;
+  }
+
+  &:before {
+    background: $twitter;
+  }
+}
+
+.social-btns .btn.google {
+  color: $google;
+
+  &:hover {
+    transition: background-color 1s;
+    background: $google;
+  }
+
+  &:before {
+    background: $google;
+  }
+}
+
+.social-btns .btn:focus:before, .social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-btns .btn:focus .fab, .social-btns .btn:hover .fab {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.social-btns .btn:focus, .social-btns .btn:hover {
+  color: white;
+}
+.social-btns {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.social-btns .btn {
+  display: inline-block;
+  background: #fff;
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  margin: 5px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30%;
+  box-shadow: 0 7px 18px -7px rgba(0,0,0,0.18);
+  opacity: 0.99;
+}
+.social-btns .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.social-btns .svg-inline--fa {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 40px;
+  width: 50px;
+}
+
+@keyframes fadein{
+  0% { opacity:0; }
+  66% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+  0% { opacity:0; }
+  66% { opacity:0; }
+  100% { opacity:1; }
+}
+
+#particles-js {
+	position: absolute;
+	width: 100%;
+	
+	canvas {
+	    top: 0;
+	    position: absolute;
+	    z-index: -100;
+	}
 }

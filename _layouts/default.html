@@ -3,9 +3,9 @@
 
 {%- include head.html -%}
 
-<body>
+<body id="body" onload="scrollCheck()">
   
-  <!-- include header.html -->
+  {%- include header.html -%}
   
   <!-- below navigation -->
   <div id="particles-js">
@@ -14,10 +14,9 @@
         {{ content }}
       </div>
     </main>
+    {%- include footer.html -%}
   </div>
-  
-  <!--{%- include footer.html -%}-->
-  
+  <script src="{{ '/assets/main.js' | relative_url }}"></script>
 </body>
 
 </html>

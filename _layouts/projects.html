@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="index-sections content section">
+    {%- if site.projects.size > 0 -%}
+    <h2 class="post-list-heading">Projects I've Worked On</h2>
+    <ul class="post-list">
+        {%- for project in site.projects -%}
+        <li>
+            <h3>{{ project.title | escape }}</h3>
+            
+        </li>
+        <hr>
+        {%- endfor -%}
+    </ul>
+    {%- endif -%}
+  </div>
+</div>

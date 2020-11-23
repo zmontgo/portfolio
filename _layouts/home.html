@@ -3,9 +3,14 @@ layout: default
 ---
 
 <div>
-    <div class="index-header">
-          <h1 style="font-family: 'Comfortaa';" class="animate__animated animate__fadeIn">Zachary Montgomery</h1>
-          <h2 style="font-family: 'Comfortaa';" class="animate__animated animate__fadeIn">Full Stack Web Developer</h2>
+    <div class="index-header top-wrapper">
+        <div class="top-spacer" id="imagespacer">
+            <img src="/assets/picture.png" onerror="document.getElementById('imagespacer').style.display='none'">
+        </div>
+        <div class="top-spacer">
+            <h1 style="font-family: 'Comfortaa';" class="animate__animated animate__fadeIn">Zachary Montgomery</h1>
+            <h2 style="font-family: 'Comfortaa';" class="animate__animated animate__fadeIn">Full Stack Web Developer</h2>
+        </div>
     </div>
     <div class="about-us index-sections content">
         <h2 class='blue-header animate__animated animate__fadeIn'>About Me</h2>
@@ -29,6 +34,7 @@ layout: default
             </div>
         </div>
     </div>
+
 </div>
 
 <script type="text/javascript" src="{{ base.url | prepend: site.url }}/assets/js/particles.js"></script>

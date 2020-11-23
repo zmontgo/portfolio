@@ -1,6 +1,13 @@
 /**
  * Reset some basic elements
  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -16,10 +23,11 @@ h6              { font-size: 1.25em; margin: 1.67em 0 }
 
 
 
+
 /**
  * Basic styling
  */
-body {
+ body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background: fixed linear-gradient(#614385, #516395);
@@ -46,7 +54,7 @@ hr {
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure,
+ul:not(.nav-links), ol:not(.nav-links), dl, figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
@@ -88,7 +96,7 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
+ul:not(.nav-links):not(.post-list), ol:not(.nav-links) {
   margin-left: $spacing-unit;
 }
 
@@ -153,9 +161,26 @@ a:before {
   transition: all 0.3s ease-in-out;
 }
 
-.animatedlink:hover:before {
+a.animatedlink
+{
+    position: relative;
+}
+
+a.animatedlink:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.animatedlink:hover:before {
   visibility: visible;
-  transform: scaleX(1);
+  width: 100%;
 }
 
 /**
@@ -267,28 +292,6 @@ pre {
     border: 0;
     padding-right: 0;
     padding-left: 0;
-  }
-}
-
-
-
-/**
- * Wrapper
- */
-.wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
-  @extend %clearfix;
-
-  @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
   }
 }
 

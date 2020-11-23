@@ -4,15 +4,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
   <title>{{ site.title }} | {{ page.title }}</title>
-  <link rel="canonical" href="https://codingprojects.org/">
+  <link rel="canonical" href="{{ site.url }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- feed_meta -%}
-  {%- if site.environment == 'production' and site.matomo -%}
-    {%- include matomo.html -%}
-  {%- endif -%}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
   <link rel="shortcut icon" href="/assets/favicon.ico">
-  <!-- Original Metadata -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://kit.fontawesome.com/24f71fad2c.js" crossorigin="anonymous"></script>
+  <!-- Social Media Metadata -->
   <meta content="Zachary Montgomery" property="og:title">
   <meta content="https://codingprojects.org{{ page.url }}" property="og:url">
   <meta content="website" property="og:type">
