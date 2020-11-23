@@ -32,6 +32,14 @@ display: flex;
     }
 
     .nav-links {
+/* Enable GPU for nice smooth animations */
+        -webkit-transform: translatez(0);
+-moz-transform: translatez(0);
+-ms-transform: translatez(0);
+-o-transform: translatez(0);
+transform: translatez(0);
+backface-visibility: hidden;
+perspective: 1000;
         display: -webkit-box;
 display: -ms-flexbox;
 display: -webkit-flex;
