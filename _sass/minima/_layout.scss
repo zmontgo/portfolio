@@ -694,3 +694,20 @@ font-family: 'Comfortaa';
 .orange-header {
   color: #E38C2D;
 }
+
+.contact-btn {
+  display: block;
+  padding: 1em 2em;
+  background: #E38C2D;
+  width: fit-content;
+  color: white;
+  border-radius: 5px;
+
+  &:hover {
+    
+    -webkit-transform: translate(3px, -3px);
+    -ms-transform: translate(3px, -3px);
+    transform: translate(3px, -3px);
+    box-shadow: -3px 3px 3px 0px #000000ee;
+  }
+}

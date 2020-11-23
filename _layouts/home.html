@@ -15,25 +15,31 @@ layout: default
     <div class="about-us index-sections content section">
         <h2 class='orange-header'>About Me</h2>
         <p>{{- site.description | escape -}}</p>
-        <p style="font-size: 1.75em;font-family: 'Sacramento', sans-serif;">Let's make something great.</p>
         <p>Get a website professionally designed, built, tested, and deployed for around <strong>$1,000</strong> (price may vary depending on size and difficulty of the project). Contact me at <a href="mailto:zachmontgo@outlook.com">zachmontgo@outlook.com</a> to bring your vision to life.</p>
     </div>
     <div class="about-us index-sections content section">
         <h2 class='orange-header'>Recent Work</h2>
         <ul class="project-list">
-            {%- for project in site.projects | limit: 3 -%}
-            
-            <li class="project">
-                <h3>{{ project.title | escape }}</h3>
-                <p>"{{ project.quote }}"</p>
-                <a href="{{ project.url | relative_url }}">Details</a>
-            </li>
-            {%- endfor -%}
+            {%- if site.projects.size > 0 -%}
+                {%- for project in site.projects | limit: 3 -%}
+                
+                <li class="project">
+                    <h3>{{ project.title | escape }}</h3>
+                    <p>"{{ project.quote }}"</p>
+                    <a href="{{ project.url | relative_url }}">Details</a>
+                </li>
+                {%- endfor -%}
+            {%- else -%}
+                <li class="project">
+                    <h3>There's Nothing Here! ... Yet.</h3>
+                </li>
+            {%- endif -%}
         </ul>
     </div>
     <div class="about-us index-sections content section">
         <h2 class='orange-header'>Contact Me</h2>
-        <a href="mailto:zachmontgo@outlook.com">Send Me An Email</a>
+        <p style="font-size: 2em;font-family: 'Sacramento', sans-serif;">Let's make something great.</p>
+        <a class="contact-btn" href="mailto:zachmontgo@outlook.com">Send Me An Email</a>
     </div>
 
 </div>
