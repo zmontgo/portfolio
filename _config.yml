@@ -16,6 +16,8 @@ header_pages:
 - index.md
 - projects.md
 theme: minima
+instagram: 'https://www.instagram.com/zachmontgo/'
+twitter: 'https://twitter.com/zachmontgo'
 plugins:
 - jekyll-feed
 - jekyll-sitemap
