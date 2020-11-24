@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="topnav-spacer"></div>
 <div>
-    <div class="index-header top-wrapper">
+    <div class="index-header top-wrapper section">
         <div class="top-spacer" id="imagespacer">
             <img src="/assets/picture.png" onerror="document.getElementById('imagespacer').style.display='none'">
         </div>
@@ -12,29 +12,31 @@ layout: default
             <h2 style="font-family: 'Comfortaa';color:#DCD0D0">Freelance Web Developer</h2>
         </div>
     </div>
-    <div class="about-us index-sections content section">
-        <h2 class='orange-header'>About Me</h2>
-        <p>{{- site.description | escape -}}</p>
-        <p>Get a website professionally designed, built, tested, and deployed for around <strong>$1,000</strong> (price may vary depending on size and difficulty of the project). Send me a quick message on my <a href="/contact/">contact form</a> to bring your vision to life.</p>
-    </div>
-    <div class="about-us index-sections content section">
-        <h2 class='orange-header'>Recent Work</h2>
-        <ul class="project-list">
-            {%- if site.projects.size > 0 -%}
-                {%- for project in site.projects limit: 3 -%}
-                
-                <li class="project">
-                    <h3>{{ project.title | escape }}</h3>
-                    <p>"{{ project.quote }}"</p>
-                    <a href="{{ project.url | relative_url }}">Details</a>
-                </li>
-                {%- endfor -%}
-            {%- else -%}
-                <li class="project">
-                    <h3>There's Nothing Here! ... Yet.</h3>
-                </li>
-            {%- endif -%}
-        </ul>
+    <div class="section-wrapper">
+        <div class="about-us index-sections content section">
+            <h2 class='orange-header'>About Me</h2>
+            <p>{{- site.description | escape -}}</p>
+            <p>Get a website professionally designed, built, tested, and deployed for around <strong>$1,000</strong> (price may vary depending on size and difficulty of the project). Send me a quick message on my <a href="/contact/">contact form</a> to bring your vision to life.</p>
+        </div>
+        <div class="about-us index-sections content section">
+            <h2 class='orange-header'>Recent Work</h2>
+            <ul class="project-list">
+                {%- if site.projects.size > 0 -%}
+                    {%- for project in site.projects limit: 3 -%}
+                    
+                    <li class="project">
+                        <h3>{{ project.title | escape }}</h3>
+                        <p>"{{ project.quote }}"</p>
+                        <a href="{{ project.url | relative_url }}">Details</a>
+                    </li>
+                    {%- endfor -%}
+                {%- else -%}
+                    <li class="project">
+                        <h3>There's Nothing Here! ... Yet.</h3>
+                    </li>
+                {%- endif -%}
+            </ul>
+        </div>
     </div>
     <div class="about-us index-sections content section">
         <h2 class='orange-header'>Contact Me</h2>
@@ -44,3 +46,4 @@ layout: default
 
 </div>
 <script type="text/javascript" src="{{ base.url | prepend: site.url }}/assets/js/app.js"></script>
+<script src="https://kit.fontawesome.com/24f71fad2c.js" crossorigin="anonymous"></script>
