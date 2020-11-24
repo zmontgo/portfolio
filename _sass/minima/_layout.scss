@@ -60,6 +60,10 @@ input[type=submit] {
 }
 
 .footer-col-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   @include relative-font-size(0.9375);
   color: $footer-text-color;
   margin-left: -$spacing-unit / 2;
@@ -67,7 +71,6 @@ input[type=submit] {
 }
 
 .footer-col {
-  float: left;
   margin-bottom: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
 }
@@ -425,6 +428,19 @@ display: flex;
 
   &:before {
     background: $instagram;
+  }
+}
+
+.social-btns .btn.github {
+  color: $github;
+  
+  &:hover {
+    transition: background-color 1s;
+    background: $github;
+  }
+
+  &:before {
+    background: $github;
   }
 }
 
