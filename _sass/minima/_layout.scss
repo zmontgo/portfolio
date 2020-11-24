@@ -2,20 +2,34 @@
   margin: 0 auto;
   width: 50%;
 }
-input {
+input, textarea {
   width: 100%;
+  margin: 1em .5em;
   padding: 0.5em 1rem;
-  height: 5vh;
-  border: black solid 2px;
   /* color: white; */
   border-radius: 5px;
-  outline: none;
+  border: none;
   margin-bottom: 3vh;
+  outline: none;
+}
+
+input {
+  height: 5vh;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 0pt 2px lightblue;
 }
 
 input[type=submit] {
   cursor: pointer;
-  background-color: black;
+  border: none;
+  background-color: #E38C2D;
   color: white;
 }
 
@@ -381,35 +395,6 @@ display: -webkit-flex;
 display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-@media screen and (max-width: 850px) {
-  .about-image {
-    width: 100vw;
-    height: 50vh;
-    border-radius: 10px;
-  }
-
-  .about-text {
-    text-align: center;
-    width: 100vw;
-  }
-
-  .section {
-    width: 90vw;
-  }
-
-  .project {
-    min-width: 100%!important;
-  }
-
-  #mc_embed_signup {
-    width: 100%;
-  }
-
-  .content {
-    text-align: center;
-  }
 }
 
 .social-btns {
