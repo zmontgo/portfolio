@@ -116,33 +116,6 @@ input[type=submit] {
   }
 }
 
-@include media-query($on-palm) {
-  p, .logo, a {
-    font-size: 4.5vw;
-  }
-  .social-btns {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-around;
-  }
-  .project-meta {
-    font-size: 1em;
-  }
-  .footer-col {
-    float: none;
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
-  }
-  .hiddenlink {
-    display:block;
-  }
-  .shownlink {
-    display: none;
-  }
-}
-
 .hiddenlink {
   display:none;
 }
