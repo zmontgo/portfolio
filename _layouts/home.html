@@ -8,15 +8,15 @@ layout: default
             <img src="/assets/picture.png" onerror="document.getElementById('imagespacer').style.display='none'">
         </div>
         <div class="top-spacer">
-            <h1 style="font-family: 'Comfortaa';color:#DCD0D0">Zachary Montgomery</h1>
-            <h2 style="font-family: 'Comfortaa';color:#DCD0D0">Freelance Web Developer</h2>
+            <h1 style="color:#DCD0D0">Zachary Montgomery</h1>
+            <h2 style="color:#DCD0D0">Freelance Web Developer</h2>
         </div>
     </div>
     <div class="section-wrapper">
         <div class="about-us index-sections content section">
             <h2 class='orange-header'>About Me</h2>
             <p>{{- site.description | escape -}}</p>
-            <p>Get a website professionally designed, built, tested, and deployed for around <strong>$1,000</strong> (price may vary depending on size and difficulty of the project). Send me a quick message on my <a href="/contact/">contact form</a> to bring your vision to life.</p>
+            <p>Get a website professionally designed, built, tested, and deployed for around $1,000 (price may vary depending on size and difficulty of the project). Send me a quick message on my <a href="/contact/">contact form</a> to bring your vision to life.</p>
         </div>
         <div class="about-us index-sections content section">
             <h2 class='orange-header'>Recent Work</h2>
@@ -38,12 +38,29 @@ layout: default
             </ul>
         </div>
     </div>
+    <div id="darksection" class="about-us index-sections content section">
+        <h2 style="font-size: 3em;font-family: 'Sacramento', sans-serif;" class="orange-header">Let's make something great.</h2>
+        <a class="contact-btn" href="/contact/">Contact Me Now</a>
+    </div>
+    
     <div class="about-us index-sections content section">
-        <h2 class='orange-header'>Contact Me</h2>
-        <p style="font-size: 2em;font-family: 'Sacramento', sans-serif;">Let's make something great.</p>
-        <a class="contact-btn" href="/contact/">Send Me An Email</a>
+        <h2>Section</h2>
+        <p>Text</p>
     </div>
 
 </div>
+
+<style>
+    #darksection {
+        width: 100vw;
+        background: black;
+        padding: 1rem 18vw 3rem 18vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+</style>
+
 <script type="text/javascript" src="{{ base.url | prepend: site.url }}/assets/js/app.js"></script>
 <script src="https://kit.fontawesome.com/24f71fad2c.js" crossorigin="anonymous"></script>

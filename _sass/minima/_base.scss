@@ -27,6 +27,13 @@ h6              { font-size: 1.25em; margin: 1.67em 0 }
 /**
  * Basic styling
  */
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: black;
+}
+
  body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;

@@ -37,6 +37,7 @@ input[type=submit] {
  * Site footer
  */
 .site-footer {
+  margin-top: 2em;
   padding: $spacing-unit 1em;
   background-color: #000000;
 
@@ -684,15 +685,16 @@ font-family: 'Comfortaa';
   display: block;
   padding: 1em 2em;
   background: #E38C2D;
-  width: fit-content;
   color: white;
   border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
 
   &:hover {
     
     -webkit-transform: translate(3px, -3px);
     -ms-transform: translate(3px, -3px);
     transform: translate(3px, -3px);
-    box-shadow: -3px 3px 3px 0px #000000ee;
+    box-shadow: -3px 3px 3px 0px #585353ee;
   }
 }
