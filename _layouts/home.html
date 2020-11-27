@@ -39,26 +39,45 @@ layout: default
         </div>
     </div>
     <div id="darksection" class="about-us index-sections content section">
-        <h2 style="font-size: 3em;font-family: 'Sacramento', sans-serif;" class="orange-header">Let's make something great.</h2>
+        <h2 class="orange-header">Let's make something great.</h2>
         <a class="contact-btn" href="/contact/">Contact Me Now</a>
     </div>
     
     <div class="about-us index-sections content section">
-        <h2 class="orange-header">Placeholder</h2>
-        <p>This website is under construction. Please pardon the mess!</p>
+        <h2 class="orange-header" style="display: inline-flex">Testimonials</h2>
+        <p>Here's what people have to say about me.</p>
+        <div class="slideshow">
+            <div class="slides">
+                <div id="slide-1">
+                    <h3>Alex</h3>
+                    <p>Zach is one of the most reliable and dedicated leaders I've ever worked with. I highly recommend working with him whether you are building a company or building your next ambitious project. You can count on Zach.</p>
+                </div>
+                <div id="slide-2">
+                    <h3>Grant</h3>
+                    <p>Love the work Zach was able to do turning my dream into a reality.</p>
+                </div>
+            </div>
+            <a href="#slide-1">1</a>
+            <a href="#slide-2">2</a>
+            <a href="#slide-3">3</a>
+            <a href="#slide-4">4</a>
+            <a href="#slide-5">5</a>
+        </div>
     </div>
 
 </div>
 
 <style>
     #darksection {
-        width: 100vw;
-        background: black;
-        padding: 1rem 18vw 3rem 18vw;
+        border-radius: 5px;
+        background: white;
+        padding: 2rem 1rem;
         text-align: center;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 </style>
 

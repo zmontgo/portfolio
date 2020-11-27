@@ -345,6 +345,7 @@ input:checked ~ .tab-content {
 .section {
   width: 65vw;
   margin: auto;
+  margin-bottom: 2rem;
 }
 
 .section.wide {
@@ -673,17 +674,90 @@ font-family: 'Comfortaa';
 .contact-btn {
   display: block;
   padding: 1em 2em;
-  background: #E38C2D;
-  color: white;
+  border: #E38C2D 3px solid;
+  color: #E38C2D;
   border-radius: 5px;
-  width: 50%;
-  margin: 0 auto;
+  transition: .4s;
 
   &:hover {
-    
-    -webkit-transform: translate(3px, -3px);
-    -ms-transform: translate(3px, -3px);
-    transform: translate(3px, -3px);
-    box-shadow: -3px 3px 3px 0px #585353ee;
+    background: white;
+    background: #E38C2D;
+  }
+}
+
+.slideshow {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  
+  
+  
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  /*
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+  */
+}
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+  margin-right: 50px;
+  border-radius: 10px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow > a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+}
+.slideshow > a:active {
+  top: 1px;
+}
+.slideshow > a:focus {
+  background: #000;
+}
+
+/* Don't need button navigation */
+@supports (scroll-snap-type: x mandatory) {
+  .slideshow > a {
+    display: none;
   }
 }
