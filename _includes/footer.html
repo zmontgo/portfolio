@@ -1,52 +1,17 @@
 
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-2">
-        <h2 class="footer-heading">Copyright</h2>
-        <p style="color: white;">&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Zachary Montgomery. All rights reserved.</p>
-      </div>
-    
-        
-      <div class="footer-col footer-col-2">
-        <h2 class="footer-heading">Quick Links</h2>
-        <ul style="font-size: 1.1em;">
-          <li style="margin: 0.5em 0;">
-            <a href="/contact/" rel="noopener noreferrer">Contact</a>
-          </li>
-          <li style="margin: 0.5em 0;">
-            <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-          </li>
-          <li style="margin: 0.5em 0;">
-            <a href="/sitemap/" target="_blank" rel="noopener noreferrer">Sitemap</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <h2 class="footer-heading">Connect</h2>
-        <div class="social-btns">
-          {%- if site.github != '' -%}
-            <a class="btn github"  rel="noopener" rel="noreferrer" href="{{ site.github | escape }}" target="_blank"><i class="fab fa-github fa-w-1"></i><span class="sr" hidden>Github Account</span></a>
-          {%- endif -%}
-          {%- if site.instagram != '' -%}
-            <a class="btn instagram"  rel="noopener" rel="noreferrer" href="{{ site.instagram | escape }}" target="_blank"><i class="fab fa-instagram fa-w-1"></i><span class="sr" hidden>Instagram Account</span></a>
-          {%- endif -%}
-          {%- if site.twitter != '' -%}
-            <a class="btn twitter" rel="noopener" rel="noreferrer" href="{{ site.twitter | escape }}" target="_blank"><i class="fab fa-twitter"></i><span class="sr" hidden>Twitter Account</span></a>
-          {%- endif -%}
-        </div>
-      </div>
-
-      <div class="footer-col footer-col-1">
-        <h2 class="footer-heading">Contribute to My Work</h2>
-        <p>Like what I'm doing but don't fancy a website? Feel free to buy me a coffee!</p>
-        <a class="contact-btn" target="_blank" rel="noopener noreferrer" href="https://buymeacoff.ee/zmontgo" style="text-align: center;">Buy Me A Coffee</a>
-      </div>
-
+<footer class="site-footer section">    
+  <div class="footer-col footer-col-2">
+    <h2 class="footer-heading">Quick Links</h2>
+    <ul style="font-size: 1.1em">
+      <li style="margin: 0.5em 0;">
+        <a href="mailto:{{ site.contact }}" target="_blank" rel="noopener noreferrer">Contact</a>
+      </li>
+      <li style="margin: 0.5em 0;">
+        <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+      </li>
+      <li style="margin: 0.5em 0;">
+        <a href="/sitemap/" target="_blank" rel="noopener noreferrer">Sitemap</a>
+      </li>
+    </ul>
   </div>
-
 </footer>

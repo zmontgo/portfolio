@@ -1,85 +1,62 @@
 ---
 layout: default
 ---
-<div class="topnav-spacer"></div>
-<div>
-    <div class="index-header top-wrapper section">
-        <div class="top-spacer" id="imagespacer">
-            <img src="/assets/picture.png" onerror="document.getElementById('imagespacer').style.display='none'">
-        </div>
-        <div class="top-spacer">
-            <h1 style="color:#DCD0D0">Zachary Montgomery</h1>
-            <h2 style="color:#DCD0D0">Freelance Web Developer</h2>
-        </div>
-    </div>
-    <div class="section-wrapper">
-        <div class="about-us index-sections content section">
-            <h2 class='orange-header'>About Me</h2>
-            <p>{{- site.description | escape -}}</p>
-            <p>Get a website professionally designed, built, tested, and deployed for around $1,000 (price may vary depending on size and difficulty of the project). Send me a quick message on my <a href="/contact/">contact form</a> to bring your vision to life.</p>
-        </div>
-        <div class="about-us index-sections content section">
-            <h2 class='orange-header'>Recent Work</h2>
-            <ul class="project-list">
-                {%- if site.projects.size > 0 -%}
-                    {%- for project in site.projects limit: 3 -%}
-                    
-                    <li class="project">
-                        <h3>{{ project.title | escape }}</h3>
-                        <p>"{{ project.quote }}"</p>
-                        <a href="{{ project.url | relative_url }}">Details</a>
-                    </li>
-                    {%- endfor -%}
-                {%- else -%}
-                    <li class="project">
-                        <h3>There's Nothing Here! ... Yet.</h3>
-                    </li>
-                {%- endif -%}
-            </ul>
-        </div>
-    </div>
-    <div id="darksection" class="about-us index-sections content section">
-        <h2 class="orange-header">Let's make something great.</h2>
-        <a class="contact-btn" href="/contact/">Contact Me Now</a>
-    </div>
-    
-    <div class="about-us index-sections content section">
-        <h2 class="orange-header" style="display: inline-flex">Testimonials</h2>
-        <p>Here's what people have to say about me.</p>
-        <div class="slideshow">
-            <div class="slides">
-                <div id="slide-1">
-                    <h3>Alex</h3>
-                    <p>Zach is one of the most reliable and dedicated leaders I've ever worked with. I highly recommend working with him whether you are building a company or building your next ambitious project. You can count on Zach.</p>
-                </div>
-                <div id="slide-2">
-                    <h3>Grant</h3>
-                    <p>Love the work Zach was able to do turning my dream into a reality.</p>
-                </div>
-            </div>
-            <a href="#slide-1">1</a>
-            <a href="#slide-2">2</a>
-            <a href="#slide-3">3</a>
-            <a href="#slide-4">4</a>
-            <a href="#slide-5">5</a>
-        </div>
-    </div>
 
+<div class="section section__hero">
+  <div class="hero-img">
+    <img src="/assets/me.png" alt="Female runners competing on a track.">
+  </div>
+  <div class="hero-txt">
+    <h1 class="main-title purple-txt">{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </div>
 </div>
+  
+  <div class="section">
+    <h1 class="purple-txt">My Work</h1>
+    <p>
+      Recent projects I've engaged in. I mostly work on websites, but I do all sorts of things, including making Discord bots.
+    </p>
+    <div class="projects">
+      {% for project in site.projects %}
+        <div class="project">
+          <h3>{{ project.name }}</h3>
+          <p>{{ project.description }}</p>
+          <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" class="btn btn__purple">Check It Out</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <hr>
 
-<style>
-    #darksection {
-        border-radius: 5px;
-        background: white;
-        padding: 2rem 1rem;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-</style>
+  <div class="section">
+    <h1 class="purple-txt">My Reviews</h1>
+    <p>Here's what people have to say about me.</p>
 
-<script type="text/javascript" src="{{ base.url | prepend: site.url }}/assets/js/app.js"></script>
-<script src="https://kit.fontawesome.com/24f71fad2c.js" crossorigin="anonymous"></script>
+    <div class="projects">
+      {% for review in site.reviews %}
+        <div class="project">
+          <img src="{{ review.img_src }}"
+          <h3>{{ review.person }}</h3>
+          <p>{{ review.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="section section__purple">
+    <h1>Contact</h1>
+    <p>Interested in learning more or having a website made? Please reach out!</p>
+    <a href="mailto:zachmontgo@outlook.com" target="_blank" rel="noopener noreferrer" class="btn">Contact Me!</a>
+  </div>
+
+  <div class="section">
+    <h1 class="purple-txt">Donate</h1>
+    <p>
+      I'm a big supporter of open source. A lot of work I do is free for everyone to use, enjoy, and modify as they see fit. However, I still need to earn a living.
+    </p>
+    <p>If you feel you've benefitted from anything I've made and want to help out (or even if you haven't and just want to help support open source development), please consider buying me a coffee! Even just $5 helps a lot.</p>
+    <a href="https://www.buymeacoffee.com/zmontgo" target="_blank" rel="noopener noreferrer" class="btn btn__purple">Buy Me a Coffee</a>
+  </div>
+</div>

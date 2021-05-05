@@ -1,25 +1,17 @@
 ---
-title: Zachary M
+title: Page Title
 timezone: UTC
 sass:
+  sass_dir: _sass
   style: compressed
-collections:
-  projects:
-    title: Projects
-    output: true
-description: 'A US-based web designer and developer. Skilled with designing, building, and deploying a website. Stunningly beautiful websites for much cheaper than other freelancers.'
+title: 'Zachary Montgomery'
+description: 'Professional full-stack web developer; skilled at designing, building, testing, and deploying websites of all types, be they simple or complex.'
 baseurl: ''
 url: https://codingprojects.org
-logo: https://
-show_excerpts: true
-header_pages:
-- index.md
-- projects.md
+contact: 'zachmontgo@outlook.com'
+logo: 'https://codingprojects.org/assets/logo.png'
 theme: minima
-github: 'https://github.com/zmontgo'
-instagram: 'https://www.instagram.com/zachmontgo/'
-twitter: 'https://twitter.com/zachmontgo'
 plugins:
-- jekyll-feed
 - jekyll-sitemap
-- jekyll-paginate
+collections:
+  - projects

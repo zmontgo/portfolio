@@ -1,0 +1,39 @@
+@media only screen and (min-width: $on-desktop) {
+  .section {
+    flex-direction: row;
+    text-align: left;
+
+    &__hero {
+      .hero-img {
+        img {
+          float: right;
+          margin-right: $spacing-unit;
+        }
+      }
+      
+      .hero-img, .hero-txt {
+        margin: 0;
+        text-align: left;
+      }
+    }
+
+    .footer-col {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  .btn {
+    &:hover {
+      color: #000;
+      background: darken(#fff, 5%);
+      transform: translateY(-3px);
+      box-shadow: 0 3px 3px rgba(darken($purple-color, 7%), 0.5);
+    }
+
+    &:active {
+      transform: translate(0, 0);
+      box-shadow: none;
+    } 
+  }
+}
